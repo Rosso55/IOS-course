@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Boom" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG_Bomb" translatesAutoresizingMaskIntoConstraints="NO" id="XZL-ka-Bpw">
+                                <rect key="frame" x="-219" y="-343" width="951" height="1337"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vba-GJ-VCG">
+                                <rect key="frame" x="94" y="465" width="186" height="30"/>
+                                <state key="normal" title="Nascondi Bomba Blu"/>
+                                <connections>
+                                    <action selector="MakeHiddenBlueBomb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IV7-Mo-3iW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9i-Z1-J9D">
+                                <rect key="frame" x="89" y="523" width="197" height="30"/>
+                                <state key="normal" title="Nascondi Bomba Rossa">
+                                    <color key="titleColor" red="0.79185521599999997" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.79185521599999997" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="MakeHiddenRedBomb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="exI-5L-gSA"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blue" translatesAutoresizingMaskIntoConstraints="NO" id="Rhl-Al-tQ0" userLabel="Blue Bomb">
+                                <rect key="frame" x="0.0" y="47" width="152" height="126"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red" translatesAutoresizingMaskIntoConstraints="NO" id="M0T-99-rv1">
+                                <rect key="frame" x="193" y="47" width="182" height="126"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="BBomb" destination="XZL-ka-Bpw" id="dly-aZ-800"/>
+                        <outlet property="BlueBomb" destination="Rhl-Al-tQ0" id="DLG-6v-BJN"/>
+                        <outlet property="HiddenBluBomb" destination="vba-GJ-VCG" id="cVY-mg-fCh"/>
+                        <outlet property="HiddenRedBomb" destination="L9i-Z1-J9D" id="uYX-ln-Je5"/>
+                        <outlet property="RedBomb" destination="M0T-99-rv1" id="1bs-uR-HWl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-209.5" y="-380.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BG_Bomb" width="1667" height="1667"/>
+        <image name="blue" width="256" height="256"/>
+        <image name="red" width="256" height="256"/>
+    </resources>
+</document>
